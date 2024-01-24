@@ -1,4 +1,12 @@
 /* .App {
+  background-image: './logo.png';
+} */
+
+/* body {
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 } */
 
 .App-Chat {
