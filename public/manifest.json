@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "short_name": "ChatGlobal",
   "name": "Create React App ",
+=======
+  "short_name": "React App",
+  "name": "Create React App Sample",
+>>>>>>> 2c826e153dd6f3eb02f8b05c60c8adcbb500752e
   "icons": [
     {
       "src": "favicon.ico",
