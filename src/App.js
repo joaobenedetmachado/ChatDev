@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { db } from './firebase-config.js';
-import { collection, getDocs, addDoc, getDoc } from 'firebase/firestore';
-
+import { getFirestore, collection, getDocs, addDoc, getDoc } from 'firebase/firestore';
+import app from './firebase-config.js';
 import Chat from './Components/Chat/ChatIndex.js';
 import PopUp from './Components/PopUp/PopUpIndex.js';
 import ConfigPopUp from './Components/ConfigPopUp/ConfigPopUp.js';
 import ThreeDots from './Components/ThreeDots/ThreeDots.js';
+
+const db = getFirestore(app);
 
 function App() {
   const [text, setText] = useState('');
