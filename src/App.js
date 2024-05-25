@@ -40,6 +40,7 @@ function App() {
       setIsAdmin(checkAdmin(username));
       return true;
     }
+    setMessages((prevMessages) => [...prevMessages, { username: 'system', message: `login error ${username}` }]);
     return false;
   };
 
@@ -179,13 +180,16 @@ function App() {
 
   return (
     <div className="App">
+      <div className="logo-container">
+        <img src="https://i.imgur.com/IcU0Eyn.png" alt="Logo" className="App-logo" />
+      </div>
       <div
         style={{
           margin: '20px 20px 20px 0',
         }}
       >
         <Chat
-          placeholder="Enter your text"
+          placeholder="Enter your message"
           value={text}
           onChange={handleChange}
           handleKeyPress={handleKeyPress}
@@ -210,10 +214,7 @@ function App() {
                     flexDirection: 'row',
                   }}
                 >
-                  {messageObject.username
-                    ? messageObject.username  + ': '
-                    : ''} 
-                  {messageObject.message}
+                  {messageObject.username ? messageObject.username  + ': ' : ''} {messageObject.message}
                 </div>
                 { isAdmin &&  <ThreeDots setShowConfigPopUp={setShowConfigPopUp} />}
                 { isAdmin && ShowConfigPopUp && <ConfigPopUp setShowConfigPopUp={setShowConfigPopUp} />}

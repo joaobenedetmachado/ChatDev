@@ -1,18 +1,20 @@
-/* .App {
-  background-image: './logo.png';
-} */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: auto; /* Allows scrolling */
+}
 
-/* body {
-  background-image: url('logo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-
-} */
+.logo-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensures the logo stays in the background */
+}
 
 .App-Chat {
   background-color: #282c34;
-  height: 100px;
-  height: 100px;
 }
 
 .App-logo {
